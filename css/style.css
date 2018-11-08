@@ -1,0 +1,91 @@
+body {
+  background-image: url("../svg/machine.png");
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position-x: center;
+  background-color: #353535;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+#wings {
+  height: 21px;
+  position: relative;
+  top: 435px;
+  left: 605px;
+}
+
+#wings:hover {
+  animation: spin 1s linear;
+}
+
+#wings:hover ~ #gum {
+  animation: drop 1.5s ease-in forwards;
+}
+
+@keyframes drop {
+  0% {
+    top: 212px;
+    height: 55px;
+  }
+  37% {
+    opacity: 1;
+  }
+  38% {
+    opacity: 0;
+  }
+  97% {
+    opacity: 0;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    top: 83.5%;
+    left: 660px;
+    height: 60px;
+  }
+}
+#gum {
+  height: 55px;
+  position: absolute;
+  top: 212px;
+  left: 615px;
+}
+
+#gum_start {
+  height: 20px;
+  width: 105px;
+  background-color: #1f1f1f;
+  position: relative;
+  top: 501px;
+  left: 630px;
+  transform: rotate(-0.7deg);
+}
+
+#stop_gum {
+  height: 27px;
+  width: 80px;
+  background-color: #E4E0E0;
+  position: absolute;
+  top: 302px;
+  left: 615px;
+  border-radius: 10px;
+}
+
+/* SKIFT FARVE + RYKKE TYGGEGUMMI
+#wings:hover ~ #gum {
+    transform: translateY(30px);
+    .cls-3 {
+    fill: #6DCC11;
+    }
+}
+*/
+
+/*# sourceMappingURL=style.css.map */
